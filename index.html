@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Card Profile</title>
+</head>
+
+<body>
+
+    <div id="app" class="container">
+        <div v-bind:class="{normal: !isActive, clicked: isActive}" class="card">
+            <div class="profile">
+            </div>
+            <div class="name">
+                <h2>Pikachu</h2>
+            </div>
+            <div class="work">
+                <h2>Poken <span>T</span>hunder</h2> 
+            </div>
+            <div class="subscribe">
+                aaa
+            </div>
+            <div class="button">
+                Join me
+            </div>
+            <div class="hover"  v-on:click="isActive = true ">
+                <div class="bar" v-bind:class="{barnormal: !isActive, barnormal: isActive}"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/app.js"></script>
+
+</body>
+
+</html>

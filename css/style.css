@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+body {
+    /* đặt ảnh nền mặc định */
+    background-image: url('../back.jpg');
+    /* dặt ảnh nền mặc định chỉ hiển thị 1 lần */ 
+    background-repeat: no-repeat;
+    /* đặt ảnh nền không cuộn cùng trang */
+    background-attachment: fixed;
+    /* đặt ảnh nền cannh giữa */
+    background-position: center center;
+    /* chia tỉ lệ hình nền càng lớn càng tốt */
+    background-size: cover;
+    /* canh lề bên trong */
+    margin: 0;
+    /* canh lề bên ngoài */
+    padding: 0;
+}
+
+.container {
+    /* neo các phần tử bên trong từ trái sang phải */
+    display: flex;
+    /* canh giữa các thành phần bên trong */
+    align-items: center;
+    /* chiều cao tối thiểu là 100vh */
+    min-height: 100vh;
+    /* canh giữa div với thành phần ngoài*/
+    justify-content: center;
+}
+
+.container .card {
+    /* neo các phần tử bên trong từ trái sang phải */
+    display: flex;
+    /* đặt chiều rộng của div là 439px */
+    width: 439px;
+    /* đặt chiều cao của div là 393px */
+    height: 393px;
+    /* đặt hiệu ứng làm mờ theo tỉ lệ */
+    backdrop-filter: blur(11.5px);
+    /* bo 4 gốc theo tỉ lệ 10px */
+    border-radius: 47px;
+    /* canh giữa div với thành phần ngoài*/
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+
+.container .normal{
+    height: 393px ;
+}
+
+.container .clicked {
+    height: 500px ;
+}
+
+.container .card .profile {
+    /* neo các phần tử từ trai sang mặc định lấy tất cả chiều rộng */
+    display: block;
+    /* đặt chiều rộng của div là 200px */
+    width: 200px;
+    /* đặt chiều cao của div là 200px */
+    height: 200px;
+    /* đặt chiều cao của div là 393px */
+    background-image: url('../avatar.jpg');
+    /* dặt ảnh nền mặc định chỉ hiển thị 1 lần */ 
+    background-repeat: no-repeat;
+    /* dặt ảnh nền mặc định canh giữa */ 
+    background-position: center;
+    /* dặt ảnh có kích thước theo phần tử cha */
+    background-size: cover;
+    /* đặt màu nền định là màu trắng  */
+    background-color: white;
+    /* bo tròn 4 gốc theo tỉ lệ 100% */
+    border-radius: 100%;
+    /* căn khoản trên của phần từ bên trong là 40px */
+    margin-top: 40px;
+}
+
+
+.container .card .name {
+    margin-top: 20px;
+}
+
+.container .card .work h2 span {
+    color: #25f025;
+}
+
+.container .card .name h2, .work h2 {
+    font-family: 'Fira Code', monospace;
+    font-weight: lighter;
+    color: white;
+    font-size: 20px;
+    line-height: 0;
+}
+
+.container .card .button {
+    display: block;
+    width: 300px;
+    height: 50px;
+    border: 1px solid white;
+    text-align: center;
+    line-height: 2.7;
+    font-size: 18px;
+    color: white;
+    font-family: 'Fira Code', monospace;
+    margin-top: 100px;
+}
+
+.container .card .bar {
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 6px;
+    border-radius: 8px;
+    background-color: #d9d9d9;
+    bottom: 20px;
+    animation-name: bar;
+    animation-duration: 1s;
+    transform: .2s;
+}
+
+.container .card .button .subscribe{
+    display: block;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(-120deg, #D62121, #C727C2, #3a11 );
+}
+
+.container .card .hover {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    justify-content: center;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.container .card .hover:hover .bar {
+    bottom: 30px;
+}
+
+.barnormal {
+    width: 150px;
+}
+
+.barclicked {
+    width: 100px;
+}
+
+@keyframes bar {
+    0%,50%{
+        opacity: 0;
+        bottom: 0px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 20px;
+    }
+}
